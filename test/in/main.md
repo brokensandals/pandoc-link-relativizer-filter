@@ -1,0 +1,36 @@
+---
+url: https://example.com/alpha/one
+---
+
+- no trailing slash
+  - [different domain](https://example2.com/alpha/two)
+  - [no domain](/alpha/one)
+  - [already relative](alpha/one)
+  - [sibling](https://example.com/alpha/two)
+  - [nibling](https://example.com/alpha/two/1)
+  - [self](https://example.com/alpha/one)
+  - [parent](https://example.com/alpha)
+  - [root](https://example.com)
+  - [child](https://example.com/alpha/one/1)
+  - [grandchild](https://example.com/alpha/one/1/i)
+  - [pibling](https://example.com/beta)
+  - [cousin](https://example.com/beta/one)
+  - [cousin-once-removed](https://example.com/beta/one/1)
+  - [query string](https://example.com/alpha/two?foo=bar)
+  - [fragment](https://example.com/alpha/two#foo)
+- trailing slash
+  - [different domain](https://example2.com/alpha/two/)
+  - [no domain](/alpha/one/)
+  - [already relative](alpha/one/)
+  - [sibling](https://example.com/alpha/two/)
+  - [nibling](https://example.com/alpha/two/1/)
+  - [self](https://example.com/alpha/one/)
+  - [parent](https://example.com/alpha/)
+  - [root](https://example.com/) (BUG that I don't care enough to fix: this should have trailing slash but doesn't)
+  - [child](https://example.com/alpha/one/1/)
+  - [grandchild](https://example.com/alpha/one/1/i/)
+  - [pibling](https://example.com/beta/)
+  - [cousin](https://example.com/beta/one/)
+  - [cousin-once-removed](https://example.com/beta/one/1/)
+  - [query string](https://example.com/alpha/two/?foo=bar)
+  - [fragment](https://example.com/alpha/two/#foo)
